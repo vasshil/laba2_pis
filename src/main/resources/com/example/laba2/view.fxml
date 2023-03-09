@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.chart.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+
+<VBox alignment="CENTER" prefHeight="575.0" prefWidth="617.0" spacing="20.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.laba2.ViewController">
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+    </padding>
+   <children>
+      <AnchorPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="537.0" prefWidth="611.0">
+         <children>
+            <Button fx:id="newNumbersButton" mnemonicParsing="false" onAction="#onNewNumbers" prefHeight="61.0" prefWidth="332.0" text="Новый набор чисел" />
+            <TextField fx:id="enterNumberField" disable="true" layoutX="351.0" layoutY="10.0" onAction="#onNumberEntered" prefHeight="41.0" prefWidth="223.0" promptText="Введите число" />
+            <LineChart fx:id="lineChart" animated="false" layoutX="-17.0" layoutY="73.0" legendVisible="false" prefHeight="305.0" prefWidth="360.0">
+              <xAxis>
+                <CategoryAxis side="BOTTOM" />
+              </xAxis>
+              <yAxis>
+                <NumberAxis side="LEFT" />
+              </yAxis>
+            </LineChart>
+            <BarChart fx:id="barChart" animated="false" layoutX="-17.0" layoutY="358.0" legendVisible="false" prefHeight="130.0" prefWidth="360.0">
+              <xAxis>
+                <CategoryAxis side="BOTTOM" />
+              </xAxis>
+              <yAxis>
+                <NumberAxis side="LEFT" />
+              </yAxis>
+            </BarChart>
+            <Rectangle arcHeight="20.0" arcWidth="20.0" fill="#e8e8e8" height="413.0" layoutX="351.0" layoutY="86.0" stroke="#ffffff00" strokeType="INSIDE" width="223.0" />
+            <Label layoutX="408.0" layoutY="109.0" text="Выберите диапзон" />
+            <TextField fx:id="selectFromField" disable="true" layoutX="364.0" layoutY="149.0" prefHeight="52.0" prefWidth="198.0" promptText="От" />
+            <TextField fx:id="selectToField" disable="true" layoutX="364.0" layoutY="216.0" prefHeight="52.0" prefWidth="198.0" promptText="До" />
+            <TextField fx:id="selectDivisionField" disable="true" layoutX="364.0" layoutY="283.0" prefHeight="52.0" prefWidth="198.0" promptText="Кратность" />
+            <Button fx:id="selectButton" disable="true" layoutX="364.0" layoutY="350.0" mnemonicParsing="false" onAction="#onSelectRange" prefHeight="61.0" prefWidth="198.0" text="Выбрать" />
+            <Button fx:id="clearSelectButton" disable="true" layoutX="364.0" layoutY="424.0" mnemonicParsing="false" onAction="#clearRangeSelection" prefHeight="61.0" prefWidth="198.0" text="Сброс" />
+            <Label fx:id="enteredNumbersLabel" layoutX="3.0" layoutY="518.0" prefHeight="17.0" prefWidth="574.0" text="Вы ввели числа: " />
+         </children>
+      </AnchorPane>
+   </children>
+</VBox>
